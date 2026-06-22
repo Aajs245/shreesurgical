@@ -1,0 +1,1079 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Shree Surgical & General Clinic | Expert Healthcare You Can Trust</title>
+<meta name="description" content="Shree Surgical & General Clinic provides expert surgical and general healthcare with compassion, accuracy, and modern medical practices. Book your appointment today.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+  :root {
+    --navy: #1A3A5C;
+    --blue: #2A7FBF;
+    --teal: #3DBFBF;
+    --teal-light: #E4F6F6;
+    --bg: #F7F9FC;
+    --white: #FFFFFF;
+    --body: #4A5568;
+    --heading: #1A202C;
+    --border: #E2E8F0;
+    --blue-light: #E8F4FB;
+    --shadow-sm: 0 1px 3px rgba(0,0,0,0.06), 0 1px 2px rgba(0,0,0,0.04);
+    --shadow-md: 0 4px 16px rgba(26,58,92,0.10);
+    --shadow-lg: 0 8px 32px rgba(26,58,92,0.12);
+    --radius: 12px;
+    --radius-lg: 20px;
+    --font: 'Plus Jakarta Sans', -apple-system, sans-serif;
+  }
+
+  html { scroll-behavior: smooth; }
+
+  body {
+    font-family: var(--font);
+    color: var(--body);
+    background: var(--white);
+    font-size: 16px;
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  /* ── NAV ── */
+  nav {
+    position: fixed; top: 0; left: 0; right: 0; z-index: 100;
+    background: rgba(255,255,255,0.97);
+    backdrop-filter: blur(8px);
+    border-bottom: 1px solid var(--border);
+    padding: 0 5%;
+  }
+  .nav-inner {
+    max-width: 1200px; margin: 0 auto;
+    display: flex; align-items: center; justify-content: space-between;
+    height: 68px;
+  }
+  .logo {
+    display: flex; align-items: center; gap: 10px;
+    text-decoration: none;
+  }
+  .logo-mark {
+    width: 36px; height: 36px;
+    background: var(--navy);
+    border-radius: 8px;
+    display: flex; align-items: center; justify-content: center;
+    flex-shrink: 0;
+  }
+  .logo-mark svg { width: 20px; height: 20px; }
+  .logo-text { display: flex; flex-direction: column; }
+  .logo-text strong {
+    font-size: 14px; font-weight: 700; color: var(--navy);
+    line-height: 1.2; letter-spacing: -0.01em;
+  }
+  .logo-text span { font-size: 11px; color: var(--teal); font-weight: 500; letter-spacing: 0.04em; text-transform: uppercase; }
+
+  .nav-links { display: flex; gap: 32px; align-items: center; list-style: none; }
+  .nav-links a {
+    text-decoration: none; color: var(--body); font-size: 14px; font-weight: 500;
+    transition: color 0.2s;
+  }
+  .nav-links a:hover { color: var(--navy); }
+  .nav-cta {
+    background: var(--navy); color: var(--white) !important;
+    padding: 9px 20px; border-radius: 8px; font-size: 14px !important;
+    font-weight: 600 !important; transition: background 0.2s !important;
+  }
+  .nav-cta:hover { background: var(--blue) !important; color: var(--white) !important; }
+
+  .hamburger { display: none; background: none; border: none; cursor: pointer; padding: 4px; }
+  .hamburger span { display: block; width: 22px; height: 2px; background: var(--navy); margin: 5px 0; border-radius: 2px; transition: 0.3s; }
+
+  @media (max-width: 768px) {
+    .nav-links { display: none; flex-direction: column; gap: 0; position: absolute; top: 68px; left: 0; right: 0; background: var(--white); border-bottom: 1px solid var(--border); padding: 16px 0; }
+    .nav-links.open { display: flex; }
+    .nav-links li { padding: 0; }
+    .nav-links a { display: block; padding: 12px 5%; font-size: 15px; }
+    .nav-cta { margin: 8px 5%; display: block; text-align: center; border-radius: 8px; }
+    .hamburger { display: block; }
+  }
+
+  /* ── HERO ── */
+  .hero {
+    padding-top: 68px;
+    min-height: 100vh;
+    display: flex; align-items: center;
+    background: linear-gradient(160deg, #F7F9FC 0%, #EDF4FB 40%, #E8F4F8 100%);
+    position: relative; overflow: hidden;
+  }
+  /* Signature ECG pulse line */
+  .ecg-line {
+    position: absolute; bottom: 0; left: 0; right: 0; height: 120px;
+    opacity: 0.12; pointer-events: none;
+  }
+  .hero-inner {
+    max-width: 1200px; margin: 0 auto; padding: 80px 5%;
+    display: grid; grid-template-columns: 1fr 1fr; gap: 64px; align-items: center;
+  }
+  .hero-badge {
+    display: inline-flex; align-items: center; gap: 8px;
+    background: var(--teal-light); border: 1px solid rgba(61,191,191,0.3);
+    color: var(--teal); font-size: 12px; font-weight: 600; letter-spacing: 0.06em;
+    text-transform: uppercase; padding: 6px 14px; border-radius: 100px;
+    margin-bottom: 24px;
+  }
+  .ecg-dot { width: 8px; height: 8px; background: var(--teal); border-radius: 50%; animation: pulse 2s infinite; }
+  @keyframes pulse { 0%,100%{opacity:1;transform:scale(1)} 50%{opacity:0.5;transform:scale(0.8)} }
+
+  .hero h1 {
+    font-size: clamp(32px, 4.5vw, 52px); font-weight: 800;
+    color: var(--heading); line-height: 1.15; letter-spacing: -0.03em;
+    margin-bottom: 20px;
+  }
+  .hero h1 em { font-style: normal; color: var(--blue); }
+  .hero p {
+    font-size: 17px; color: var(--body); line-height: 1.75;
+    margin-bottom: 36px; max-width: 480px;
+  }
+  .hero-actions { display: flex; gap: 12px; flex-wrap: wrap; margin-bottom: 40px; }
+  .btn-primary {
+    background: var(--navy); color: var(--white);
+    padding: 13px 28px; border-radius: 8px; font-weight: 600; font-size: 15px;
+    text-decoration: none; border: none; cursor: pointer; transition: background 0.2s, transform 0.15s;
+    display: inline-flex; align-items: center; gap: 8px; font-family: var(--font);
+  }
+  .btn-primary:hover { background: var(--blue); transform: translateY(-1px); }
+  .btn-secondary {
+    background: transparent; color: var(--navy);
+    padding: 13px 28px; border-radius: 8px; font-weight: 600; font-size: 15px;
+    text-decoration: none; border: 1.5px solid var(--navy); cursor: pointer;
+    transition: all 0.2s; display: inline-flex; align-items: center; gap: 8px; font-family: var(--font);
+  }
+  .btn-secondary:hover { background: var(--navy); color: var(--white); }
+  .hero-phone {
+    display: flex; align-items: center; gap: 10px;
+    font-size: 14px; color: var(--body);
+  }
+  .hero-phone a { color: var(--navy); font-weight: 700; font-size: 17px; text-decoration: none; }
+  .hero-phone a:hover { color: var(--blue); }
+  .phone-icon-wrap {
+    width: 36px; height: 36px; background: var(--white); border-radius: 50%;
+    display: flex; align-items: center; justify-content: center;
+    box-shadow: var(--shadow-md);
+  }
+
+  .hero-image-wrap {
+    position: relative;
+  }
+  .hero-img {
+    width: 100%; border-radius: var(--radius-lg);
+    object-fit: cover; aspect-ratio: 4/5;
+    box-shadow: var(--shadow-lg);
+    display: block;
+  }
+  .hero-card {
+    position: absolute; bottom: -20px; left: -24px;
+    background: var(--white); border-radius: var(--radius);
+    padding: 16px 20px; box-shadow: var(--shadow-lg);
+    display: flex; align-items: center; gap: 14px;
+  }
+  .hero-card-icon {
+    width: 44px; height: 44px; background: var(--teal-light);
+    border-radius: 10px; display: flex; align-items: center; justify-content: center; flex-shrink: 0;
+  }
+  .hero-card-text strong { display: block; font-size: 18px; font-weight: 800; color: var(--navy); }
+  .hero-card-text span { font-size: 12px; color: var(--body); }
+
+  .hero-card2 {
+    position: absolute; top: 24px; right: -20px;
+    background: var(--navy); border-radius: var(--radius);
+    padding: 14px 18px; box-shadow: var(--shadow-lg);
+    text-align: center;
+  }
+  .hero-card2 strong { display: block; font-size: 13px; font-weight: 700; color: var(--white); }
+  .hero-card2 span { font-size: 11px; color: rgba(255,255,255,0.6); }
+  .stars { color: #F6C90E; font-size: 12px; margin-bottom: 4px; }
+
+  @media (max-width: 900px) {
+    .hero-inner { grid-template-columns: 1fr; gap: 48px; }
+    .hero-image-wrap { max-width: 480px; margin: 0 auto; }
+    .hero-card { left: 0; bottom: -16px; }
+    .hero-card2 { right: 0; }
+  }
+
+  /* ── SECTION COMMONS ── */
+  section { padding: 88px 5%; }
+  .section-inner { max-width: 1200px; margin: 0 auto; }
+  .eyebrow {
+    display: inline-block; font-size: 12px; font-weight: 600; letter-spacing: 0.1em;
+    text-transform: uppercase; color: var(--teal); margin-bottom: 12px;
+  }
+  .section-title { font-size: clamp(26px, 3.5vw, 40px); font-weight: 800; color: var(--heading); letter-spacing: -0.03em; line-height: 1.2; margin-bottom: 16px; }
+  .section-sub { font-size: 17px; color: var(--body); max-width: 520px; line-height: 1.7; }
+  .section-header { margin-bottom: 56px; }
+  .section-header.centered { text-align: center; }
+  .section-header.centered .section-sub { margin: 0 auto; }
+
+  /* ── ABOUT ── */
+  .about { background: var(--white); }
+  .about-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 80px; align-items: center; }
+  .about-img-wrap { position: relative; }
+  .about-img {
+    width: 100%; border-radius: var(--radius-lg);
+    object-fit: cover; aspect-ratio: 3/4;
+    box-shadow: var(--shadow-lg); display: block;
+  }
+  .about-accent {
+    position: absolute; top: -16px; left: -16px;
+    width: 100px; height: 100px; border-radius: 20px;
+    background: var(--teal); opacity: 0.12;
+  }
+  .about-accent2 {
+    position: absolute; bottom: -16px; right: -16px;
+    width: 72px; height: 72px; border-radius: 16px;
+    background: var(--navy); opacity: 0.12;
+  }
+  .about-features { margin-top: 32px; display: flex; flex-direction: column; gap: 16px; }
+  .about-feature {
+    display: flex; align-items: flex-start; gap: 14px;
+    padding: 16px 18px; border-radius: 10px; background: var(--bg);
+    border: 1px solid var(--border);
+    transition: box-shadow 0.2s;
+  }
+  .about-feature:hover { box-shadow: var(--shadow-md); }
+  .about-feature-icon {
+    width: 38px; height: 38px; background: var(--blue-light);
+    border-radius: 8px; display: flex; align-items: center; justify-content: center; flex-shrink: 0;
+  }
+  .about-feature strong { display: block; font-size: 14px; font-weight: 700; color: var(--heading); margin-bottom: 2px; }
+  .about-feature p { font-size: 13px; color: var(--body); }
+
+  @media (max-width: 900px) {
+    .about-grid { grid-template-columns: 1fr; gap: 48px; }
+    .about-img-wrap { max-width: 420px; margin: 0 auto; }
+  }
+
+  /* ── SERVICES ── */
+  .services { background: var(--bg); }
+  .services-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; }
+  .service-card {
+    background: var(--white); border-radius: var(--radius-lg);
+    padding: 28px; border: 1px solid var(--border);
+    transition: box-shadow 0.25s, transform 0.25s, border-color 0.25s;
+    position: relative; overflow: hidden;
+  }
+  .service-card::before {
+    content: ''; position: absolute; top: 0; left: 0; right: 0; height: 3px;
+    background: linear-gradient(90deg, var(--teal), var(--blue));
+    opacity: 0; transition: opacity 0.25s;
+  }
+  .service-card:hover { box-shadow: var(--shadow-lg); transform: translateY(-3px); border-color: transparent; }
+  .service-card:hover::before { opacity: 1; }
+  .service-icon {
+    width: 52px; height: 52px; background: var(--blue-light);
+    border-radius: 12px; display: flex; align-items: center; justify-content: center;
+    margin-bottom: 18px; transition: background 0.25s;
+  }
+  .service-card:hover .service-icon { background: var(--teal-light); }
+  .service-card h3 { font-size: 17px; font-weight: 700; color: var(--heading); margin-bottom: 10px; }
+  .service-card p { font-size: 14px; color: var(--body); line-height: 1.7; margin-bottom: 18px; }
+  .learn-more {
+    font-size: 13px; font-weight: 600; color: var(--blue);
+    text-decoration: none; display: inline-flex; align-items: center; gap: 4px;
+    transition: gap 0.2s;
+  }
+  .learn-more:hover { gap: 8px; }
+
+  @media (max-width: 900px) { .services-grid { grid-template-columns: 1fr 1fr; } }
+  @media (max-width: 560px) { .services-grid { grid-template-columns: 1fr; } }
+
+  /* ── WHY CHOOSE US ── */
+  .why { background: var(--white); }
+  .why-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 24px; }
+  .why-card {
+    text-align: center; padding: 32px 20px; border-radius: var(--radius-lg);
+    border: 1px solid var(--border); transition: box-shadow 0.2s, transform 0.2s;
+  }
+  .why-card:hover { box-shadow: var(--shadow-md); transform: translateY(-2px); }
+  .why-icon {
+    width: 60px; height: 60px; border-radius: 16px;
+    background: var(--blue-light); display: flex; align-items: center; justify-content: center;
+    margin: 0 auto 20px;
+  }
+  .why-card h3 { font-size: 16px; font-weight: 700; color: var(--heading); margin-bottom: 10px; }
+  .why-card p { font-size: 14px; color: var(--body); line-height: 1.65; }
+  @media (max-width: 900px) { .why-grid { grid-template-columns: 1fr 1fr; } }
+  @media (max-width: 560px) { .why-grid { grid-template-columns: 1fr; } }
+
+  /* ── APPOINTMENT ── */
+  .appointment { background: var(--bg); }
+  .appt-inner { max-width: 1200px; margin: 0 auto; display: grid; grid-template-columns: 1fr 1fr; gap: 80px; align-items: start; }
+  .appt-info { padding-top: 8px; }
+  .appt-info .section-sub { margin-bottom: 36px; }
+  .appt-contact-item { display: flex; align-items: center; gap: 14px; margin-bottom: 18px; }
+  .appt-contact-icon { width: 44px; height: 44px; background: var(--white); border-radius: 10px; box-shadow: var(--shadow-sm); display: flex; align-items: center; justify-content: center; flex-shrink: 0; }
+  .appt-contact-item strong { display: block; font-size: 12px; font-weight: 600; color: var(--body); text-transform: uppercase; letter-spacing: 0.06em; }
+  .appt-contact-item a, .appt-contact-item span { font-size: 16px; font-weight: 700; color: var(--navy); text-decoration: none; }
+  .appt-contact-item a:hover { color: var(--blue); }
+
+  .appt-form { background: var(--white); border-radius: var(--radius-lg); padding: 36px; border: 1px solid var(--border); box-shadow: var(--shadow-sm); }
+  .form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+  .form-group { margin-bottom: 20px; }
+  .form-group label { display: block; font-size: 13px; font-weight: 600; color: var(--heading); margin-bottom: 7px; }
+  .form-group input, .form-group select, .form-group textarea {
+    width: 100%; padding: 11px 14px; border: 1.5px solid var(--border);
+    border-radius: 8px; font-size: 14px; font-family: var(--font); color: var(--heading);
+    background: var(--bg); outline: none; transition: border-color 0.2s, box-shadow 0.2s;
+  }
+  .form-group input:focus, .form-group select:focus, .form-group textarea:focus {
+    border-color: var(--blue); box-shadow: 0 0 0 3px rgba(42,127,191,0.12);
+    background: var(--white);
+  }
+  .form-group textarea { resize: vertical; min-height: 100px; }
+  .form-group select { appearance: none; background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8' viewBox='0 0 12 8'%3E%3Cpath d='M1 1l5 5 5-5' stroke='%234A5568' stroke-width='1.5' fill='none' stroke-linecap='round'/%3E%3C/svg%3E"); background-repeat: no-repeat; background-position: right 14px center; padding-right: 36px; }
+  .form-submit { width: 100%; padding: 14px; background: var(--navy); color: var(--white); border: none; border-radius: 8px; font-family: var(--font); font-size: 15px; font-weight: 600; cursor: pointer; transition: background 0.2s; }
+  .form-submit:hover { background: var(--blue); }
+  @media (max-width: 900px) { .appt-inner { grid-template-columns: 1fr; } .form-row { grid-template-columns: 1fr; } }
+
+  /* ── REVIEWS ── */
+  .reviews { background: var(--white); overflow: hidden; }
+  .reviews-track-wrap { overflow: hidden; margin: 0 -5%; }
+  .reviews-track {
+    display: flex; gap: 20px;
+    animation: scroll-x 28s linear infinite;
+    width: max-content;
+  }
+  .reviews-track:hover { animation-play-state: paused; }
+  @keyframes scroll-x { 0%{transform:translateX(0)} 100%{transform:translateX(-50%)} }
+  .review-card {
+    background: var(--bg); border-radius: var(--radius-lg);
+    padding: 28px; width: 300px; flex-shrink: 0;
+    border: 1px solid var(--border);
+  }
+  .review-rating { color: #F6C90E; font-size: 14px; margin-bottom: 14px; letter-spacing: 2px; }
+  .review-card p { font-size: 14px; color: var(--body); line-height: 1.7; margin-bottom: 20px; font-style: italic; }
+  .review-author { display: flex; align-items: center; gap: 12px; }
+  .review-avatar {
+    width: 42px; height: 42px; border-radius: 50%; object-fit: cover;
+    background: var(--blue-light); display: flex; align-items: center; justify-content: center;
+    font-weight: 700; font-size: 16px; color: var(--navy); flex-shrink: 0;
+  }
+  .review-author strong { display: block; font-size: 14px; font-weight: 700; color: var(--heading); }
+  .review-author span { font-size: 12px; color: var(--body); }
+
+  /* ── CONTACT ── */
+  .contact { background: var(--navy); }
+  .contact .section-title { color: var(--white); }
+  .contact .eyebrow { color: var(--teal); }
+  .contact-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 64px; align-items: start; }
+  .contact-info-items { display: flex; flex-direction: column; gap: 24px; margin-top: 36px; }
+  .contact-item { display: flex; gap: 16px; align-items: flex-start; }
+  .contact-item-icon { width: 44px; height: 44px; border-radius: 10px; background: rgba(255,255,255,0.1); display: flex; align-items: center; justify-content: center; flex-shrink: 0; }
+  .contact-item strong { display: block; font-size: 12px; font-weight: 600; color: rgba(255,255,255,0.5); text-transform: uppercase; letter-spacing: 0.08em; margin-bottom: 4px; }
+  .contact-item a, .contact-item p { color: var(--white); font-size: 16px; font-weight: 600; text-decoration: none; }
+  .contact-item a:hover { color: var(--teal); }
+  .wa-btn {
+    display: inline-flex; align-items: center; gap: 10px;
+    background: #25D366; color: var(--white);
+    padding: 12px 22px; border-radius: 8px;
+    font-family: var(--font); font-size: 15px; font-weight: 600;
+    text-decoration: none; margin-top: 20px; transition: opacity 0.2s;
+  }
+  .wa-btn:hover { opacity: 0.9; }
+  .map-placeholder {
+    border-radius: var(--radius-lg); overflow: hidden;
+    height: 320px; background: rgba(255,255,255,0.08);
+    display: flex; align-items: center; justify-content: center;
+    border: 1px solid rgba(255,255,255,0.12); flex-direction: column; gap: 12px;
+    color: rgba(255,255,255,0.5); font-size: 14px;
+  }
+  .hours-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 8px; margin-top: 8px; }
+  .hours-item { background: rgba(255,255,255,0.08); border-radius: 8px; padding: 10px 14px; }
+  .hours-item strong { display: block; font-size: 12px; color: rgba(255,255,255,0.5); font-weight: 500; }
+  .hours-item span { font-size: 14px; color: var(--white); font-weight: 600; }
+  @media (max-width: 900px) { .contact-grid { grid-template-columns: 1fr; } }
+
+  /* ── FOOTER ── */
+  footer {
+    background: #0F2238; padding: 56px 5% 32px;
+    border-top: 1px solid rgba(255,255,255,0.06);
+  }
+  .footer-inner { max-width: 1200px; margin: 0 auto; }
+  .footer-grid { display: grid; grid-template-columns: 2fr 1fr 1.2fr 1fr; gap: 48px; margin-bottom: 48px; }
+  .footer-brand .logo { margin-bottom: 16px; display: inline-flex; }
+  .footer-brand p { font-size: 14px; color: rgba(255,255,255,0.45); line-height: 1.7; max-width: 260px; }
+  .footer-col h4 { font-size: 12px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.08em; color: rgba(255,255,255,0.4); margin-bottom: 18px; }
+  .footer-links { list-style: none; display: flex; flex-direction: column; gap: 10px; }
+  .footer-links a { font-size: 14px; color: rgba(255,255,255,0.6); text-decoration: none; transition: color 0.2s; }
+  .footer-links a:hover { color: var(--teal); }
+  .footer-appt { background: var(--teal); color: var(--navy); padding: 11px 20px; border-radius: 8px; font-size: 13px; font-weight: 700; text-decoration: none; display: inline-block; margin-top: 20px; transition: opacity 0.2s; }
+  .footer-appt:hover { opacity: 0.88; }
+  .footer-bottom { border-top: 1px solid rgba(255,255,255,0.07); padding-top: 24px; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 12px; }
+  .footer-bottom p { font-size: 13px; color: rgba(255,255,255,0.3); }
+  @media (max-width: 900px) { .footer-grid { grid-template-columns: 1fr 1fr; } }
+  @media (max-width: 560px) { .footer-grid { grid-template-columns: 1fr; } }
+
+  /* ── WA FLOAT ── */
+  .wa-float {
+    position: fixed; bottom: 28px; right: 28px; z-index: 200;
+    width: 56px; height: 56px; background: #25D366; border-radius: 50%;
+    display: flex; align-items: center; justify-content: center;
+    box-shadow: 0 4px 20px rgba(37,211,102,0.4);
+    text-decoration: none; transition: transform 0.2s;
+  }
+  .wa-float:hover { transform: scale(1.08); }
+
+  /* Fade-in on scroll */
+  .fade-up { opacity: 0; transform: translateY(28px); transition: opacity 0.6s, transform 0.6s; }
+  .fade-up.visible { opacity: 1; transform: translateY(0); }
+
+  @media (max-width: 600px) {
+    section { padding: 64px 5%; }
+    .hero-actions { flex-direction: column; }
+    .btn-primary, .btn-secondary { justify-content: center; }
+    .hero-card { position: static; margin-top: 16px; }
+    .hero-card2 { position: static; margin-top: 12px; }
+  }
+</style>
+</head>
+<body>
+
+<!-- ── NAVIGATION ── -->
+<nav>
+  <div class="nav-inner">
+    <a href="#" class="logo">
+      <div class="logo-mark">
+        <svg viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M10 3v14M3 10h14" stroke="#3DBFBF" stroke-width="2.5" stroke-linecap="round"/>
+          <circle cx="10" cy="10" r="8" stroke="white" stroke-width="1.5"/>
+        </svg>
+      </div>
+      <div class="logo-text">
+        <strong>Shree Surgical</strong>
+        <span>&amp; General Clinic</span>
+      </div>
+    </a>
+    <button class="hamburger" onclick="toggleMenu()" aria-label="Menu">
+      <span></span><span></span><span></span>
+    </button>
+    <ul class="nav-links" id="nav-links">
+      <li><a href="#about">About</a></li>
+      <li><a href="#services">Services</a></li>
+      <li><a href="#reviews">Reviews</a></li>
+      <li><a href="#contact">Contact</a></li>
+      <li><a href="#appointment" class="nav-cta">Book Appointment</a></li>
+    </ul>
+  </div>
+</nav>
+
+<!-- ── HERO ── -->
+<section class="hero" id="home">
+  <!-- ECG signature line -->
+  <svg class="ecg-line" viewBox="0 0 1440 120" preserveAspectRatio="none" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <path d="M0 80 L180 80 L200 80 L218 20 L230 100 L244 40 L258 90 L270 80 L360 80 L540 80 L558 80 L576 20 L588 100 L602 40 L616 90 L628 80 L720 80 L900 80 L918 80 L936 20 L948 100 L962 40 L976 90 L988 80 L1080 80 L1260 80 L1278 80 L1296 20 L1308 100 L1322 40 L1336 90 L1348 80 L1440 80" stroke="#3DBFBF" stroke-width="2"/>
+  </svg>
+
+  <div class="hero-inner">
+    <div class="hero-content">
+      <div class="hero-badge">
+        <span class="ecg-dot"></span>
+        Trusted Medical Care in Mumbai
+      </div>
+      <h1>Expert Surgical &amp; General Healthcare <em>You Can Trust</em></h1>
+      <p>Providing comprehensive medical consultations, surgical care, and patient-focused treatment with compassion and expertise.</p>
+      <div class="hero-actions">
+        <a href="#appointment" class="btn-primary">
+          <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><rect x="2" y="3" width="12" height="12" rx="2" stroke="white" stroke-width="1.5"/><path d="M5 1v4M11 1v4M2 7h12" stroke="white" stroke-width="1.5" stroke-linecap="round"/></svg>
+          Book Appointment
+        </a>
+        <a href="tel:+918657770099" class="btn-secondary">
+          <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M2 3.5A1.5 1.5 0 013.5 2h.879a1 1 0 01.95.688l.867 2.6a1 1 0 01-.296 1.06L4.4 7.148C5.36 9.052 6.948 10.64 8.852 11.6l.8-1.5a1 1 0 011.06-.296l2.6.867A1 1 0 0114 11.621V12.5A1.5 1.5 0 0112.5 14C6.701 14 2 9.299 2 3.5z" stroke="#1A3A5C" stroke-width="1.5"/></svg>
+          Call Now
+        </a>
+      </div>
+      <div class="hero-phone">
+        <div class="phone-icon-wrap">
+          <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M2 3.5A1.5 1.5 0 013.5 2h.879a1 1 0 01.95.688l.867 2.6a1 1 0 01-.296 1.06L4.4 7.148C5.36 9.052 6.948 10.64 8.852 11.6l.8-1.5a1 1 0 011.06-.296l2.6.867A1 1 0 0114 11.621V12.5A1.5 1.5 0 0112.5 14C6.701 14 2 9.299 2 3.5z" fill="#3DBFBF"/></svg>
+        </div>
+        <span>Emergency &amp; Appointments: <a href="tel:+918657770099">+91 86577 70099</a></span>
+      </div>
+    </div>
+
+    <div class="hero-image-wrap">
+      <img
+        class="hero-img"
+        src="https://images.unsplash.com/photo-1576091160399-112ba8d25d1f?w=700&q=80&auto=format&fit=crop"
+        alt="Doctor consulting a patient in a clean, modern clinic"
+        loading="eager"
+      />
+      <div class="hero-card">
+        <div class="hero-card-icon">
+          <svg width="22" height="22" viewBox="0 0 22 22" fill="none"><circle cx="11" cy="11" r="9" stroke="#3DBFBF" stroke-width="1.8"/><path d="M11 7v4l3 2" stroke="#3DBFBF" stroke-width="1.8" stroke-linecap="round"/></svg>
+        </div>
+        <div class="hero-card-text">
+          <strong>Mon – Sat</strong>
+          <span>9:00 AM – 8:00 PM</span>
+        </div>
+      </div>
+      <div class="hero-card2">
+        <div class="stars">★★★★★</div>
+        <strong>Trusted by Patients</strong>
+        <span>Quality Care, Every Visit</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── ABOUT ── -->
+<section class="about" id="about">
+  <div class="section-inner">
+    <div class="about-grid">
+      <div class="about-img-wrap fade-up">
+        <div class="about-accent"></div>
+        <div class="about-accent2"></div>
+        <img
+          class="about-img"
+          src="https://images.unsplash.com/photo-1519494026892-80bbd2d6fd0d?w=600&q=80&auto=format&fit=crop"
+          alt="Modern clinic interior"
+        />
+      </div>
+      <div class="fade-up">
+        <span class="eyebrow">About the Clinic</span>
+        <h2 class="section-title">Shree Surgical &amp; General Clinic</h2>
+        <p class="section-sub">Committed to delivering quality healthcare through accurate diagnosis, ethical treatment, and personalized patient care. We focus on creating a comfortable healthcare experience while maintaining the highest standards of medical excellence.</p>
+
+        <div class="about-features">
+          <div class="about-feature">
+            <div class="about-feature-icon">
+              <svg width="18" height="18" viewBox="0 0 18 18" fill="none"><path d="M9 1l1.8 5.4H17l-4.9 3.6 1.8 5.4L9 12.4l-4.9 3.6 1.8-5.4L1 7.4h6.2z" fill="#2A7FBF"/></svg>
+            </div>
+            <div>
+              <strong>Experienced Medical Care</strong>
+              <p>Skilled medical professionals with years of clinical and surgical expertise.</p>
+            </div>
+          </div>
+          <div class="about-feature">
+            <div class="about-feature-icon">
+              <svg width="18" height="18" viewBox="0 0 18 18" fill="none"><path d="M9 2a7 7 0 100 14A7 7 0 009 2zm0 3v4l3 1.5" stroke="#2A7FBF" stroke-width="1.5" stroke-linecap="round"/></svg>
+            </div>
+            <div>
+              <strong>Modern Treatment Approach</strong>
+              <p>Up-to-date diagnostic tools and evidence-based treatment protocols.</p>
+            </div>
+          </div>
+          <div class="about-feature">
+            <div class="about-feature-icon">
+              <svg width="18" height="18" viewBox="0 0 18 18" fill="none"><path d="M9 16s-7-4.5-7-9a7 7 0 0114 0c0 4.5-7 9-7 9z" stroke="#2A7FBF" stroke-width="1.5"/><circle cx="9" cy="7" r="2" stroke="#2A7FBF" stroke-width="1.5"/></svg>
+            </div>
+            <div>
+              <strong>Patient-First Philosophy</strong>
+              <p>Every decision is guided by what's best for patient health and wellbeing.</p>
+            </div>
+          </div>
+          <div class="about-feature">
+            <div class="about-feature-icon">
+              <svg width="18" height="18" viewBox="0 0 18 18" fill="none"><path d="M3 9l4 4 8-8" stroke="#2A7FBF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </div>
+            <div>
+              <strong>Affordable Healthcare</strong>
+              <p>Quality care that is accessible and transparent in pricing — no hidden costs.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── SERVICES ── -->
+<section class="services" id="services">
+  <div class="section-inner">
+    <div class="section-header centered fade-up">
+      <span class="eyebrow">What We Offer</span>
+      <h2 class="section-title">Our Medical Services</h2>
+      <p class="section-sub">From routine consultations to advanced surgical procedures, we provide comprehensive care across key specialties.</p>
+    </div>
+    <div class="services-grid">
+
+      <div class="service-card fade-up">
+        <div class="service-icon">
+          <svg width="26" height="26" viewBox="0 0 26 26" fill="none"><path d="M13 3v6M10 6h6M5 13h4l2 4 4-8 2 4h4" stroke="#2A7FBF" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/><path d="M13 23a10 10 0 100-20 10 10 0 000 20z" stroke="#2A7FBF" stroke-width="1.5"/></svg>
+        </div>
+        <h3>General Medicine</h3>
+        <p>Diagnosis and treatment of common illnesses, chronic conditions, and preventive health care for patients of all ages.</p>
+        <a href="#appointment" class="learn-more">Book Consultation →</a>
+      </div>
+
+      <div class="service-card fade-up">
+        <div class="service-icon">
+          <svg width="26" height="26" viewBox="0 0 26 26" fill="none"><path d="M8 13h10M13 8v10" stroke="#2A7FBF" stroke-width="1.8" stroke-linecap="round"/><rect x="3" y="3" width="20" height="20" rx="5" stroke="#2A7FBF" stroke-width="1.5"/></svg>
+        </div>
+        <h3>General Surgery</h3>
+        <p>Minimally invasive and open surgical procedures performed with precision, safety, and comprehensive post-op care.</p>
+        <a href="#appointment" class="learn-more">Learn More →</a>
+      </div>
+
+      <div class="service-card fade-up">
+        <div class="service-icon">
+          <svg width="26" height="26" viewBox="0 0 26 26" fill="none"><path d="M13 5v16M9 9l4-4 4 4M9 17l4 4 4-4" stroke="#2A7FBF" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/><circle cx="13" cy="13" r="10" stroke="#2A7FBF" stroke-width="1.5"/></svg>
+        </div>
+        <h3>Orthopedic Consultation</h3>
+        <p>Expert assessment and management of bone, joint, and musculoskeletal conditions to restore mobility and reduce pain.</p>
+        <a href="#appointment" class="learn-more">Learn More →</a>
+      </div>
+
+      <div class="service-card fade-up">
+        <div class="service-icon">
+          <svg width="26" height="26" viewBox="0 0 26 26" fill="none"><path d="M13 4C13 4 8 8 8 13s5 9 5 9 5-4 5-9-5-9-5-9z" stroke="#2A7FBF" stroke-width="1.5"/><path d="M8 13h10" stroke="#2A7FBF" stroke-width="1.5" stroke-linecap="round"/></svg>
+        </div>
+        <h3>Spine Surgery</h3>
+        <p>Advanced spinal procedures for disc herniation, spinal stenosis, and other conditions causing back pain or nerve compression.</p>
+        <a href="#appointment" class="learn-more">Learn More →</a>
+      </div>
+
+      <div class="service-card fade-up">
+        <div class="service-icon">
+          <svg width="26" height="26" viewBox="0 0 26 26" fill="none"><ellipse cx="13" cy="10" rx="5" ry="7" stroke="#2A7FBF" stroke-width="1.5"/><path d="M8 17s-4 2-4 6h18c0-4-4-6-4-6" stroke="#2A7FBF" stroke-width="1.5" stroke-linecap="round"/></svg>
+        </div>
+        <h3>Urology Services</h3>
+        <p>Diagnosis and treatment of urinary tract disorders, kidney conditions, and male reproductive health concerns.</p>
+        <a href="#appointment" class="learn-more">Learn More →</a>
+      </div>
+
+      <div class="service-card fade-up">
+        <div class="service-icon">
+          <svg width="26" height="26" viewBox="0 0 26 26" fill="none"><path d="M13 4a9 9 0 11-6.364 15.364" stroke="#2A7FBF" stroke-width="1.5" stroke-linecap="round"/><path d="M5 8l2 4 2-4" stroke="#2A7FBF" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </div>
+        <h3>Nephrology Consultation</h3>
+        <p>Specialized care for kidney diseases, chronic renal conditions, and management of dialysis-related concerns.</p>
+        <a href="#appointment" class="learn-more">Learn More →</a>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ── WHY CHOOSE US ── -->
+<section class="why" id="why">
+  <div class="section-inner">
+    <div class="section-header centered fade-up">
+      <span class="eyebrow">Why Patients Choose Us</span>
+      <h2 class="section-title">Healthcare Built on Trust</h2>
+      <p class="section-sub">We combine medical expertise with a genuine commitment to your wellbeing at every step.</p>
+    </div>
+    <div class="why-grid">
+      <div class="why-card fade-up">
+        <div class="why-icon">
+          <svg width="28" height="28" viewBox="0 0 28 28" fill="none"><path d="M14 4l2.6 7.8H24l-6.6 4.8 2.6 7.8-6.6-4.8-6.6 4.8 2.6-7.8L3 11.8h7.4z" stroke="#2A7FBF" stroke-width="1.5" stroke-linejoin="round"/></svg>
+        </div>
+        <h3>Experienced Medical Professionals</h3>
+        <p>Our team brings years of specialized training and hands-on clinical experience to every patient interaction.</p>
+      </div>
+      <div class="why-card fade-up">
+        <div class="why-icon">
+          <svg width="28" height="28" viewBox="0 0 28 28" fill="none"><path d="M14 25s-11-6-11-13a11 11 0 0122 0c0 7-11 13-11 13z" stroke="#2A7FBF" stroke-width="1.5"/><path d="M10 14l3 3 5-5" stroke="#2A7FBF" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </div>
+        <h3>Patient-Centered Care</h3>
+        <p>We listen, explain, and involve you in every decision — because your health journey belongs to you.</p>
+      </div>
+      <div class="why-card fade-up">
+        <div class="why-icon">
+          <svg width="28" height="28" viewBox="0 0 28 28" fill="none"><rect x="4" y="6" width="20" height="16" rx="3" stroke="#2A7FBF" stroke-width="1.5"/><path d="M9 12h10M9 16h6" stroke="#2A7FBF" stroke-width="1.5" stroke-linecap="round"/></svg>
+        </div>
+        <h3>Modern Medical Practices</h3>
+        <p>Evidence-based protocols, updated diagnostic tools, and the latest treatment guidelines for the best outcomes.</p>
+      </div>
+      <div class="why-card fade-up">
+        <div class="why-icon">
+          <svg width="28" height="28" viewBox="0 0 28 28" fill="none"><path d="M14 4v6M8 8l4 4M4 14h6M8 20l4-4M14 24v-6M20 20l-4-4M24 14h-6M20 8l-4 4" stroke="#2A7FBF" stroke-width="1.5" stroke-linecap="round"/></svg>
+        </div>
+        <h3>Trusted Healthcare Services</h3>
+        <p>A reputation built on transparency, ethical practice, and consistently positive outcomes across every specialty.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── APPOINTMENT ── -->
+<section class="appointment" id="appointment">
+  <div class="appt-inner">
+    <div class="appt-info fade-up">
+      <span class="eyebrow">Get in Touch</span>
+      <h2 class="section-title">Request an Appointment</h2>
+      <p class="section-sub">Fill in the form and our team will confirm your appointment within a few hours during clinic hours.</p>
+
+      <div class="appt-contact-items">
+        <div class="appt-contact-item">
+          <div class="appt-contact-icon">
+            <svg width="18" height="18" viewBox="0 0 18 18" fill="none"><path d="M2 4A1.5 1.5 0 013.5 2.5h.88a1 1 0 01.95.69l.87 2.6a1 1 0 01-.3 1.06L4.4 8.15C5.36 10.05 6.95 11.64 8.85 12.6l.8-1.5a1 1 0 011.06-.3l2.6.87A1 1 0 0114 12.62V13.5A1.5 1.5 0 0112.5 15C6.7 15 2 10.3 2 4.5V4z" stroke="#2A7FBF" stroke-width="1.3"/></svg>
+          </div>
+          <div>
+            <strong>Phone</strong>
+            <a href="tel:+918657770099">+91 86577 70099</a>
+          </div>
+        </div>
+        <div class="appt-contact-item">
+          <div class="appt-contact-icon">
+            <svg width="18" height="18" viewBox="0 0 18 18" fill="none"><circle cx="9" cy="9" r="7" stroke="#2A7FBF" stroke-width="1.3"/><path d="M9 6v3l2 1.5" stroke="#2A7FBF" stroke-width="1.3" stroke-linecap="round"/></svg>
+          </div>
+          <div>
+            <strong>Clinic Hours</strong>
+            <span>Mon – Sat, 9:00 AM – 8:00 PM</span>
+          </div>
+        </div>
+        <div class="appt-contact-item">
+          <div class="appt-contact-icon">
+            <svg width="18" height="18" viewBox="0 0 18 18" fill="none"><path d="M9 2a5 5 0 100 10A5 5 0 009 2zM3.5 15.5S4.5 13 9 13s5.5 2.5 5.5 2.5" stroke="#2A7FBF" stroke-width="1.3" stroke-linecap="round"/></svg>
+          </div>
+          <div>
+            <strong>Walk-ins Welcome</strong>
+            <span>Subject to doctor availability</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="appt-form fade-up">
+      <div class="form-row">
+        <div class="form-group">
+          <label for="fname">Full Name</label>
+          <input type="text" id="fname" placeholder="Rahul Sharma">
+        </div>
+        <div class="form-group">
+          <label for="phone">Phone Number</label>
+          <input type="tel" id="phone" placeholder="+91 98765 43210">
+        </div>
+      </div>
+      <div class="form-group">
+        <label for="email">Email Address</label>
+        <input type="email" id="email" placeholder="rahul@email.com">
+      </div>
+      <div class="form-row">
+        <div class="form-group">
+          <label for="service">Service Required</label>
+          <select id="service">
+            <option value="">Select a service</option>
+            <option>General Medicine</option>
+            <option>General Surgery</option>
+            <option>Orthopedic Consultation</option>
+            <option>Spine Surgery</option>
+            <option>Urology Services</option>
+            <option>Nephrology Consultation</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label for="date">Preferred Date</label>
+          <input type="date" id="date">
+        </div>
+      </div>
+      <div class="form-group">
+        <label for="message">Message (optional)</label>
+        <textarea id="message" placeholder="Briefly describe your concern or symptoms..."></textarea>
+      </div>
+      <button class="form-submit" onclick="handleSubmit(event)">Request Appointment</button>
+    </div>
+  </div>
+</section>
+
+<!-- ── REVIEWS ── -->
+<section class="reviews" id="reviews">
+  <div class="section-inner" style="margin-bottom:40px;">
+    <div class="section-header centered fade-up">
+      <span class="eyebrow">Patient Feedback</span>
+      <h2 class="section-title">What Our Patients Say</h2>
+      <p class="section-sub">Real experiences from patients who trusted us with their care.</p>
+    </div>
+  </div>
+  <div class="reviews-track-wrap">
+    <div class="reviews-track" id="reviews-track">
+      <!-- cards duplicated for infinite loop -->
+      <div class="review-card">
+        <div class="review-rating">★★★★★</div>
+        <p>"The doctors here are extremely knowledgeable and took time to explain everything to me clearly. The clinic is very clean and well-organized."</p>
+        <div class="review-author">
+          <div class="review-avatar">R</div>
+          <div><strong>Ramesh Patel</strong><span>General Medicine Patient</span></div>
+        </div>
+      </div>
+      <div class="review-card">
+        <div class="review-rating">★★★★★</div>
+        <p>"Had my surgery here and the entire experience was seamless. From pre-op consultations to post-op follow-ups, the team was exceptional."</p>
+        <div class="review-author">
+          <div class="review-avatar">S</div>
+          <div><strong>Sunita Desai</strong><span>Surgical Patient</span></div>
+        </div>
+      </div>
+      <div class="review-card">
+        <div class="review-rating">★★★★★</div>
+        <p>"Very professional staff and the waiting time was minimal. The orthopedic consultation helped me understand my knee problem properly."</p>
+        <div class="review-author">
+          <div class="review-avatar">A</div>
+          <div><strong>Ankit Mehta</strong><span>Orthopedic Patient</span></div>
+        </div>
+      </div>
+      <div class="review-card">
+        <div class="review-rating">★★★★★</div>
+        <p>"I've been coming here for two years now. Consistent quality of care, affordable fees, and the doctors genuinely care about your health."</p>
+        <div class="review-author">
+          <div class="review-avatar">P</div>
+          <div><strong>Priya Nair</strong><span>Regular Patient</span></div>
+        </div>
+      </div>
+      <div class="review-card">
+        <div class="review-rating">★★★★★</div>
+        <p>"Visited for a nephrology consultation. The doctor was thorough, patient, and gave very clear guidance on managing my condition."</p>
+        <div class="review-author">
+          <div class="review-avatar">V</div>
+          <div><strong>Vijay Kulkarni</strong><span>Nephrology Patient</span></div>
+        </div>
+      </div>
+      <div class="review-card">
+        <div class="review-rating">★★★★★</div>
+        <p>"The urology department here is top-notch. Very discreet, professional, and the treatment outcome has been excellent for me."</p>
+        <div class="review-author">
+          <div class="review-avatar">M</div>
+          <div><strong>Manoj Sharma</strong><span>Urology Patient</span></div>
+        </div>
+      </div>
+      <div class="review-card">
+        <div class="review-rating">★★★★★</div>
+        <p>"Spine surgery consultation was thorough and the doctor explained all non-surgical options first before recommending surgery. Very ethical approach."</p>
+        <div class="review-author">
+          <div class="review-avatar">K</div>
+          <div><strong>Kavita Joshi</strong><span>Spine Patient</span></div>
+        </div>
+      </div>
+      <!-- duplicate for seamless loop -->
+      <div class="review-card">
+        <div class="review-rating">★★★★★</div>
+        <p>"The doctors here are extremely knowledgeable and took time to explain everything to me clearly. The clinic is very clean and well-organized."</p>
+        <div class="review-author">
+          <div class="review-avatar">R</div>
+          <div><strong>Ramesh Patel</strong><span>General Medicine Patient</span></div>
+        </div>
+      </div>
+      <div class="review-card">
+        <div class="review-rating">★★★★★</div>
+        <p>"Had my surgery here and the entire experience was seamless. From pre-op consultations to post-op follow-ups, the team was exceptional."</p>
+        <div class="review-author">
+          <div class="review-avatar">S</div>
+          <div><strong>Sunita Desai</strong><span>Surgical Patient</span></div>
+        </div>
+      </div>
+      <div class="review-card">
+        <div class="review-rating">★★★★★</div>
+        <p>"Very professional staff and the waiting time was minimal. The orthopedic consultation helped me understand my knee problem properly."</p>
+        <div class="review-author">
+          <div class="review-avatar">A</div>
+          <div><strong>Ankit Mehta</strong><span>Orthopedic Patient</span></div>
+        </div>
+      </div>
+      <div class="review-card">
+        <div class="review-rating">★★★★★</div>
+        <p>"I've been coming here for two years now. Consistent quality of care, affordable fees, and the doctors genuinely care about your health."</p>
+        <div class="review-author">
+          <div class="review-avatar">P</div>
+          <div><strong>Priya Nair</strong><span>Regular Patient</span></div>
+        </div>
+      </div>
+      <div class="review-card">
+        <div class="review-rating">★★★★★</div>
+        <p>"Visited for a nephrology consultation. The doctor was thorough, patient, and gave very clear guidance on managing my condition."</p>
+        <div class="review-author">
+          <div class="review-avatar">V</div>
+          <div><strong>Vijay Kulkarni</strong><span>Nephrology Patient</span></div>
+        </div>
+      </div>
+      <div class="review-card">
+        <div class="review-rating">★★★★★</div>
+        <p>"The urology department here is top-notch. Very discreet, professional, and the treatment outcome has been excellent for me."</p>
+        <div class="review-author">
+          <div class="review-avatar">M</div>
+          <div><strong>Manoj Sharma</strong><span>Urology Patient</span></div>
+        </div>
+      </div>
+      <div class="review-card">
+        <div class="review-rating">★★★★★</div>
+        <p>"Spine surgery consultation was thorough and the doctor explained all non-surgical options first before recommending surgery. Very ethical approach."</p>
+        <div class="review-author">
+          <div class="review-avatar">K</div>
+          <div><strong>Kavita Joshi</strong><span>Spine Patient</span></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── CONTACT ── -->
+<section class="contact" id="contact">
+  <div class="section-inner">
+    <div class="contact-grid">
+      <div class="fade-up">
+        <span class="eyebrow">Contact Us</span>
+        <h2 class="section-title">We're Here When You Need Us</h2>
+
+        <div class="contact-info-items">
+          <div class="contact-item">
+            <div class="contact-item-icon">
+              <svg width="20" height="20" viewBox="0 0 20 20" fill="none"><path d="M2 4A1.5 1.5 0 013.5 2.5h.88a1 1 0 01.95.69l.87 2.6a1 1 0 01-.3 1.06L4.4 8.15C5.36 10.05 6.95 11.64 8.85 12.6l.8-1.5a1 1 0 011.06-.3l2.6.87a1 1 0 01.69.95v.88A1.5 1.5 0 0112.5 16C6.7 16 2 11.3 2 5.5V4z" stroke="#3DBFBF" stroke-width="1.4"/></svg>
+            </div>
+            <div>
+              <strong>Phone</strong>
+              <a href="tel:+918657770099">+91 86577 70099</a>
+            </div>
+          </div>
+          <div class="contact-item">
+            <div class="contact-item-icon">
+              <svg width="20" height="20" viewBox="0 0 20 20" fill="none"><circle cx="10" cy="10" r="8" stroke="#3DBFBF" stroke-width="1.4"/><path d="M10 7v3l2.5 1.5" stroke="#3DBFBF" stroke-width="1.4" stroke-linecap="round"/></svg>
+            </div>
+            <div>
+              <strong>Clinic Hours</strong>
+              <p>Monday – Saturday<br>9:00 AM – 8:00 PM</p>
+            </div>
+          </div>
+          <div class="contact-item">
+            <div class="contact-item-icon">
+              <svg width="20" height="20" viewBox="0 0 20 20" fill="none"><path d="M10 2a6 6 0 100 12A6 6 0 0010 2zM4.93 14.93S5.93 13 10 13s5.07 1.93 5.07 1.93" stroke="#3DBFBF" stroke-width="1.4" stroke-linecap="round"/></svg>
+            </div>
+            <div>
+              <strong>Emergency</strong>
+              <p>Call us directly for emergency consultation guidance</p>
+            </div>
+          </div>
+        </div>
+
+        <a href="https://wa.me/918657770099" target="_blank" class="wa-btn">
+          <svg width="20" height="20" viewBox="0 0 20 20" fill="white"><path d="M17.04 2.93A9.9 9.9 0 0010.02.03C4.55.03.07 4.5.07 9.97c0 1.75.46 3.47 1.34 4.98L0 20l5.19-1.36a9.97 9.97 0 004.83 1.23h.01c5.47 0 9.95-4.47 9.95-9.95 0-2.66-1.03-5.16-2.94-7.04zm-7.02 15.3a8.27 8.27 0 01-4.21-1.15l-.3-.18-3.08.81.82-3-.2-.31A8.26 8.26 0 011.77 9.97c0-4.56 3.7-8.27 8.26-8.27 2.2 0 4.27.86 5.83 2.42a8.21 8.21 0 012.42 5.85c-.01 4.56-3.72 8.26-8.26 8.26zm4.53-6.19c-.25-.12-1.47-.72-1.69-.81-.23-.08-.39-.12-.56.13-.16.24-.64.81-.78.97-.15.17-.29.18-.54.06-.25-.12-1.05-.39-2-1.23-.74-.66-1.24-1.47-1.38-1.72-.15-.24-.02-.37.11-.5.12-.1.25-.27.37-.4.13-.14.17-.24.25-.4.08-.16.04-.3-.02-.41-.06-.12-.56-1.35-.77-1.85-.2-.49-.41-.42-.56-.43h-.48c-.16 0-.42.06-.65.3-.22.24-.85.84-.85 2.04 0 1.2.87 2.36.99 2.52.12.17 1.71 2.62 4.15 3.67.58.25 1.03.4 1.38.51.58.18 1.11.16 1.52.1.46-.07 1.42-.58 1.62-1.14.2-.56.2-1.04.14-1.14-.06-.09-.22-.15-.47-.27z"/></svg>
+          Chat on WhatsApp
+        </a>
+      </div>
+
+      <div class="fade-up">
+        <div class="map-placeholder">
+          <svg width="40" height="40" viewBox="0 0 40 40" fill="none"><circle cx="20" cy="18" r="8" stroke="rgba(255,255,255,0.4)" stroke-width="1.5"/><path d="M20 10a8 8 0 010 16C14 26 9 22 9 18" stroke="rgba(255,255,255,0.4)" stroke-width="1.5" stroke-linecap="round"/><path d="M20 30c0 0-11-8-11-16s5-12 11-12 11 4 11 12-11 16-11 16z" stroke="rgba(255,255,255,0.4)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/><circle cx="20" cy="18" r="3" fill="rgba(255,255,255,0.4)"/></svg>
+          <span>Google Maps Embed</span>
+          <small style="font-size:12px;color:rgba(255,255,255,0.3);">Replace with your Google Maps embed code</small>
+        </div>
+
+        <div style="margin-top:24px;">
+          <h4 style="font-size:12px;font-weight:600;letter-spacing:0.08em;text-transform:uppercase;color:rgba(255,255,255,0.4);margin-bottom:14px;">Consultation Hours</h4>
+          <div class="hours-grid">
+            <div class="hours-item"><strong>Mon – Fri</strong><span>9 AM – 8 PM</span></div>
+            <div class="hours-item"><strong>Saturday</strong><span>9 AM – 6 PM</span></div>
+            <div class="hours-item" style="grid-column:span 2;"><strong>Sunday</strong><span>Closed — Emergency calls welcome</span></div>
+          </div>
+        </div>
+
+        <div style="margin-top:24px;padding:20px;background:rgba(255,255,255,0.07);border-radius:12px;border:1px solid rgba(255,255,255,0.1);">
+          <p style="font-size:13px;color:rgba(255,255,255,0.5);margin-bottom:12px;font-weight:600;text-transform:uppercase;letter-spacing:0.06em;">Emergency Contact</p>
+          <a href="tel:+918657770099" style="display:flex;align-items:center;gap:12px;text-decoration:none;">
+            <div style="width:44px;height:44px;background:var(--teal);border-radius:10px;display:flex;align-items:center;justify-content:center;flex-shrink:0;">
+              <svg width="20" height="20" viewBox="0 0 20 20" fill="none"><path d="M2 4A1.5 1.5 0 013.5 2.5h.88a1 1 0 01.95.69l.87 2.6a1 1 0 01-.3 1.06L4.4 8.15C5.36 10.05 6.95 11.64 8.85 12.6l.8-1.5a1 1 0 011.06-.3l2.6.87a1 1 0 01.69.95v.88A1.5 1.5 0 0112.5 16C6.7 16 2 11.3 2 5.5V4z" fill="white"/></svg>
+            </div>
+            <div>
+              <span style="display:block;font-size:11px;color:rgba(255,255,255,0.5);font-weight:500;">Call anytime</span>
+              <span style="font-size:18px;font-weight:800;color:white;">+91 86577 70099</span>
+            </div>
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── FOOTER ── -->
+<footer>
+  <div class="footer-inner">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <a href="#home" class="logo">
+          <div class="logo-mark">
+            <svg viewBox="0 0 20 20" fill="none"><path d="M10 3v14M3 10h14" stroke="#3DBFBF" stroke-width="2.5" stroke-linecap="round"/><circle cx="10" cy="10" r="8" stroke="white" stroke-width="1.5"/></svg>
+          </div>
+          <div class="logo-text">
+            <strong>Shree Surgical</strong>
+            <span style="color:rgba(255,255,255,0.4);">& General Clinic</span>
+          </div>
+        </a>
+        <p>Providing comprehensive medical and surgical care with precision, compassion, and a patient-first approach.</p>
+      </div>
+      <div class="footer-col">
+        <h4>Quick Links</h4>
+        <ul class="footer-links">
+          <li><a href="#about">About Us</a></li>
+          <li><a href="#services">Services</a></li>
+          <li><a href="#why">Why Choose Us</a></li>
+          <li><a href="#reviews">Patient Reviews</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Our Services</h4>
+        <ul class="footer-links">
+          <li><a href="#appointment">General Medicine</a></li>
+          <li><a href="#appointment">General Surgery</a></li>
+          <li><a href="#appointment">Orthopedic</a></li>
+          <li><a href="#appointment">Spine Surgery</a></li>
+          <li><a href="#appointment">Urology</a></li>
+          <li><a href="#appointment">Nephrology</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Contact</h4>
+        <ul class="footer-links" style="gap:14px;">
+          <li style="color:rgba(255,255,255,0.6);font-size:14px;line-height:1.5;">
+            <a href="tel:+918657770099" style="color:rgba(255,255,255,0.8);font-weight:600;">+91 86577 70099</a>
+          </li>
+          <li style="color:rgba(255,255,255,0.5);font-size:13px;line-height:1.7;">Mon – Sat<br>9:00 AM – 8:00 PM</li>
+        </ul>
+        <a href="#appointment" class="footer-appt">Book Appointment</a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>© 2025 Shree Surgical & General Clinic. All rights reserved.</p>
+      <p>Designed for patient trust &amp; care excellence.</p>
+    </div>
+  </div>
+</footer>
+
+<!-- WhatsApp Float -->
+<a href="https://wa.me/918657770099" target="_blank" class="wa-float" title="Chat on WhatsApp">
+  <svg width="28" height="28" viewBox="0 0 28 28" fill="white"><path d="M23.86 4.1A13.86 13.86 0 0014.03 0C6.37 0 .1 6.27.1 13.93c0 2.46.64 4.86 1.87 6.97L0 28l7.27-1.9a13.9 13.9 0 006.76 1.72h.01c7.66 0 13.93-6.27 13.93-13.93 0-3.72-1.45-7.22-4.11-9.79zM14.04 25.6a11.56 11.56 0 01-5.9-1.61l-.42-.25-4.32 1.13 1.16-4.2-.28-.43A11.56 11.56 0 012.49 13.9c0-6.38 5.18-11.57 11.56-11.57 3.09 0 5.98 1.2 8.17 3.39a11.5 11.5 0 013.38 8.19c-.01 6.38-5.2 11.57-11.56 11.57zm6.34-8.67c-.35-.17-2.06-1.02-2.38-1.13-.32-.12-.55-.17-.78.18s-.9 1.13-1.1 1.36-.4.25-.75.08c-.35-.17-1.47-.54-2.8-1.73-1.04-.92-1.74-2.05-1.94-2.4-.2-.35-.02-.53.16-.7.16-.15.35-.39.52-.58.18-.2.23-.34.35-.57.12-.23.06-.43-.03-.6-.08-.17-.78-1.89-1.08-2.59-.28-.68-.57-.59-.78-.6h-.67c-.23 0-.6.09-.91.43-.31.34-1.19 1.17-1.19 2.85 0 1.68 1.22 3.3 1.38 3.53.17.23 2.4 3.67 5.82 5.14.81.35 1.44.56 1.93.72.81.25 1.55.22 2.13.13.65-.1 2-.82 2.28-1.6.28-.79.28-1.46.2-1.6-.09-.14-.31-.22-.66-.38z"/></svg>
+</a>
+
+<script>
+  // Hamburger menu
+  function toggleMenu() {
+    document.getElementById('nav-links').classList.toggle('open');
+  }
+  // Close on link click
+  document.querySelectorAll('.nav-links a').forEach(a => {
+    a.addEventListener('click', () => document.getElementById('nav-links').classList.remove('open'));
+  });
+
+  // Scroll-reveal
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('visible'); } });
+  }, { threshold: 0.12, rootMargin: '0px 0px -40px 0px' });
+  document.querySelectorAll('.fade-up').forEach(el => observer.observe(el));
+
+  // Form submission
+  function handleSubmit(e) {
+    e.preventDefault();
+    const btn = e.target;
+    btn.textContent = 'Sending...';
+    btn.disabled = true;
+    setTimeout(() => {
+      btn.textContent = '✓ Request Sent';
+      btn.style.background = '#3DBFBF';
+      setTimeout(() => { btn.textContent = 'Request Appointment'; btn.disabled = false; btn.style.background = ''; }, 3000);
+    }, 1200);
+  }
+
+  // Stagger fade-up animation delays
+  document.querySelectorAll('.services-grid .fade-up, .why-grid .fade-up').forEach((el, i) => {
+    el.style.transitionDelay = (i * 80) + 'ms';
+  });
+</script>
+</body>
+</html>
